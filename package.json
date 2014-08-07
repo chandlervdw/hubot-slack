@@ -1,35 +1,74 @@
 {
-  "name": "hosted-hubot",
-  "version": "2.7.1",
-  "private": true,
-  "author": "GitHub Inc.",
-  "keywords": [
-    "github",
-    "hubot",
-    "campfire",
-    "bot"
+  "name": "hubot-slack",
+  "version": "2.1.1",
+  "author": {
+    "name": "Tiny Speck",
+    "url": "https://www.tinyspeck.com/"
+  },
+  "contributors": [
+    {
+      "name": "Myles Grant",
+      "email": "myles@tinyspeck.com"
+    },
+    {
+      "name": "Evan Solomon"
+    },
+    {
+      "name": "Jon Dalberg"
+    },
+    {
+      "name": "Patrick Connolly"
+    },
+    {
+      "name": "Chip Hayner",
+      "email": "chayner@centresource.com"
+    },
+    {
+      "name": "Eric Lindvall",
+      "email": "eric@papertrailapp.com"
+    }
   ],
-  "description": "A simple helpful robot for your Company",
+  "keywords": [
+    "hubot",
+    "tinyspeck",
+    "adapter",
+    "slack"
+  ],
+  "description": "A Slack adapter for hubot",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/github/hubot/raw/master/LICENSE"
+      "url": "http://opensource.org/licenses/mit-license.php"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/github/hubot.git"
+    "url": "http://github.com/tinyspeck/hubot-slack.git"
   },
-  "dependencies": {
-    "hubot": ">= 2.6.0 < 3.0.0",
-    "hubot-scripts": ">= 2.5.0 < 3.0.0",
+  "bugs": {
+    "url": "https://github.com/tinyspeck/hubot-slack/issues",
+    "email": "help@tinyspeck.com"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.7.1",
+    "grunt": "~0.4.1",
+    "grunt-release": "~0.6.0",
+    "should": "~2.0.2",
+    "mocha": "~1.13.0",
+    "hubot": "~2.6.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-shell": "~0.5.0",
     "hubot-slack": "^2.1.0",
     "hubot-plusplus": "^1.1.0",
     "ntwitter": "~0.5.0",
     "hubot-tell": "*"
   },
+  "main": "./src/slack",
   "engines": {
-    "node": ">= 0.8.x",
+    "node": ">=0.8.x",
     "npm": ">= 1.1.x"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register --reporter spec"
   }
 }
